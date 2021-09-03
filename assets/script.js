@@ -225,6 +225,7 @@ const handleInstance = (item) => {
       tinput.classList.add('instance');
       if(rowIndex === parseInt(item.id / 10) || colIndex === parseInt(item.id % 10) || item.classList[2] === tdata[i].classList[2]) {
         item.querySelector('input').classList.add('duplicate');
+        item.querySelector('input').value = null;
       } 
     } else if(!item.querySelector('input').value && item.id !== tdata[i].id) {
       item.querySelector('input').classList.remove('duplicate');
